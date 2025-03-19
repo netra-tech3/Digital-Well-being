@@ -1,0 +1,74 @@
+/* Mental Health Page - Advanced Styling */
+
+.mental-health-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b2735, #415a77);
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.8);
+}
+
+.impact-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+  margin-bottom: 20px;
+}
+
+.impact-message {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.toxicity-level {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff4c4c;
+}
+
+.tips-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+  margin-top: 20px;
+}
+
+.tips-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.tips-section ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.tips-section li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.tips-section li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #4caf50;
+  font-size: 1.5rem;
+}

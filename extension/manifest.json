@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Toxicity Detector",
+  "version": "1.0",
+  "description": "Detects toxic content in web pages",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["http://*/", "https://*/"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
