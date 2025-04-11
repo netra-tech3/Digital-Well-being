@@ -56,7 +56,7 @@
 
 // const app = express();
 // const PORT = 5000;
-// const API_KEY = "AIzaSyDqk-xjLPJqL0IGZsMQx5_9Lgva9SHcm9A";
+// const API_KEY = "";
 
 // app.use(cors());
 // app.use(bodyParser.json());
