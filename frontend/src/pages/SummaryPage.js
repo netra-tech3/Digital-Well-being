@@ -49,8 +49,7 @@ const SummaryPage = () => {
 
       {toxicityData && (
         <div className="toxicity-info">
-          <h2>📌 Detected Toxic Content</h2>
-          <p className="toxicity-text">{toxicityData.text}</p>
+         
           <p className="toxicity-score">
             <strong>Toxicity Level:</strong> {toxicityData.toxicity.toFixed(2)}
           </p>

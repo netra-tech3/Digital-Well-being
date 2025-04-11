@@ -145,7 +145,7 @@ const PERSPECTIVE_API_KEY = "AIzaSyDqk-xjLPJqL0IGZsMQx5_9Lgva9SHcm9A";
 const GEMINI_API_KEY = "AIzaSyBaWZv5dojNuCN-OGQSnk47HaaNZW9i5hc"; // Replace with your Gemini API Key
 
 // Initialize Gemini AI
-const geminiAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "0.1mb" }));
@@ -177,6 +177,7 @@ const analyzeToxicity = async (text) => {
       `https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=${PERSPECTIVE_API_KEY}`,
       {
         comment: { text: trimmedText }, // Send only trimmed text
+        
         languages: ["en"],
         requestedAttributes: { TOXICITY: {} },
       },
@@ -248,34 +249,54 @@ app.post("/summary", async (req, res) => {
     const { content } = req.body;
 
     if (!content || content.length < 50) {
-      return res.status(400).json({ error: "Content is too short for summary." });
+      return res.status(400).json({ error: "Content is too short for a meaningful summary." });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Use the latest model
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" }); // Or gemini-1.0-pro / flash
 
     const prompt = `
-      Summarize the following content in 500 words:
+      Summarize the following content in 200 words:
       "${content}"
 
-      Also, based on this content, provide 5 recommendations for improving digital well-being.
+      Also, based on this content, provide 5 actionable recommendations for improving digital well-being.
     `;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text();
+    const text = await response.text();
 
-    // Extract summary and recommendations
-    const [summary, ...recommendations] = text.split("\n").filter(Boolean);
+    // Optional: Console log to debug raw response
+    console.log("AI Raw Response:", text);
+
+    // Extracting structured data
+    const lines = text.split("\n").filter((line) => line.trim() !== "");
+    const summary = lines[0]; // First line is usually the summary
+    const recommendations = lines.slice(1).filter(line => line.length > 5).slice(0, 5);
 
     res.json({
-      summary,
-      recommendations: recommendations.slice(0, 5), // Get first 5 suggestions
+      summary: summary || "Summary not available.",
+      recommendations: recommendations.length > 0 ? recommendations : ["No recommendations available."],
     });
   } catch (error) {
     console.error("Error generating summary:", error);
-    res.status(500).json({ error: "Failed to generate summary." });
+    res.status(500).json({ error: "Failed to generate summary due to server error." });
   }
 });
+
+
+const pastFourDaysData = [
+  { day: "Day 1", avgToxicity: 0.35 },
+  { day: "Day 2", avgToxicity: 0.52 },
+  { day: "Day 3", avgToxicity: 0.48 },
+  { day: "Day 4", avgToxicity: 0.41 },
+];
+
+app.get("/toxicity-four-days", (req, res) => {
+  res.json(pastFourDaysData);
+});
+
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
