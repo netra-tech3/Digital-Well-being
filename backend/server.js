@@ -5,7 +5,7 @@
 
 // // const app = express();
 // // const PORT = 5000;
-// // const API_KEY = "AIzaSyDqk-xjLPJqL0IGZsMQx5_9Lgva9SHcm9A";
+// // const API_KEY = "";
 
 // // app.use(cors());
 // // app.use(bodyParser.json());
@@ -141,8 +141,8 @@ const app = express();
 const PORT = 5000;
 
 // API Keys
-const PERSPECTIVE_API_KEY = "AIzaSyDqk-xjLPJqL0IGZsMQx5_9Lgva9SHcm9A";
-const GEMINI_API_KEY = "AIzaSyBaWZv5dojNuCN-OGQSnk47HaaNZW9i5hc"; // Replace with your Gemini API Key
+const PERSPECTIVE_API_KEY = "";
+const GEMINI_API_KEY = ""; // Replace with your Gemini API Key
 
 // Initialize Gemini AI
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
