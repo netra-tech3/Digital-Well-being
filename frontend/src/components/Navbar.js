@@ -4,6 +4,8 @@ import "./Navbar.css";
 import { FaChartLine, FaList, FaBrain, FaFileAlt, FaHome } from "react-icons/fa";
 
 const Navbar = () => {
+
+  
   return (
     <div className="sidebar">
       <h2 className="logo">Toxicity Dashboard</h2>

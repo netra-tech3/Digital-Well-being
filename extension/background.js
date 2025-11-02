@@ -13,11 +13,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         // Notify content.js if toxicity is high
         if (toxicityScore > 0.45) {
           chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-            chrome.scripting.executeScript({
-              target: { tabId: tabs[0].id },
-              function: showToxicityWarning,
-              args: [toxicityScore],
+            chrome.tabs.sendMessage(tabs[0].id, {
+              toxicityScore: toxicityScore,
             });
+            
           });
         }
       })
@@ -40,7 +39,7 @@ function showToxicityWarning(toxicityScore) {
     warning.style.borderRadius = "5px";
     warning.style.zIndex = "9999";
     warning.style.fontSize = "16px";
-    warning.innerText = `⚠️ Warning: High Toxicity Detected (Score: ${toxicityScore.toFixed(
+    warning.innerText = `⚠️ Warning: High Toxicity  (Score: ${toxicityScore.toFixed(
       2
     )})`;
 

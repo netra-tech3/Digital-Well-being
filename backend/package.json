@@ -2,8 +2,12 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.7.9",
+    "bottleneck": "^2.19.5",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.3",
     "express": "^4.21.2",
+    "lru-cache": "^11.2.2",
     "puppeteer": "^24.3.0",
     "tesseract.js": "^6.0.0"
   }

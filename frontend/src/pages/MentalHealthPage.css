@@ -1,74 +1,114 @@
-/* Mental Health Page - Advanced Styling */
+/* 🔮 Mental Health Page - Futuristic Cosmic Glow Theme */
 
 .mental-health-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1b2735, #415a77);
-  color: white;
-  text-align: center;
-  padding: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #030303, #392004);
+  color: #f0f0f0;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeIn 1s ease-in;
 }
 
 .page-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.8);
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  
+  margin-bottom: 35px;
 }
 
-.impact-section {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
+.impact-section, .tips-section, .extra-section, .resources-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 900px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(15px);
+  animation: slideUp 0.8s ease;
+}
+
+.impact-section h2, .tips-section h2, .extra-section h2, .resources-section h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
+  background: linear-gradient(90deg, #2d6ccb, #1787b7);
 }
 
 .impact-message {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 12px;
+  color: #ffeecc;
 }
 
 .toxicity-level {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #ff4c4c;
+  color: #ff6666;
+  margin-top: 8px;
 }
 
-.tips-section {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.25);
-  margin-top: 20px;
-}
-
-.tips-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.tips-section ul {
-  list-style-type: none;
+.tips-section ul, .resources-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.15rem;
+  color: #e0f7fa;
   text-align: left;
-  font-size: 1.2rem;
 }
 
-.tips-section li {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
+.tips-section li, .resources-section li {
+  margin: 12px 0;
+  padding-left: 24px;
+  position: relative;
 }
 
 .tips-section li::before {
-  content: "✔️";
-  margin-right: 10px;
-  color: #4caf50;
-  font-size: 1.5rem;
+  content: "✅";
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  color: #76ff03;
+}
+
+.resources-section li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  color: #ffd54f;
+}
+
+.extra-section p, .resources-section p {
+  font-size: 1.1rem;
+  color: #d1f0f2;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

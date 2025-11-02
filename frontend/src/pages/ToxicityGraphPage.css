@@ -1,46 +1,62 @@
-/* Advanced Toxicity Graph Page Styling */
+/* 🌌 Ultra-Futuristic Toxicity Graph Page Styling */
 
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #dedee1, #2a2a4a);
-    color: white;
-    text-align: center;
-    padding: 40px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 100px 40px 40px 300px;
+  background: radial-gradient(circle at top left, #4d250a97, #030303, #392004);
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
+h1 {
+  
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color:#18f0cc;
   }
   
-  .graph-container {
-    width: 85%;
-    max-width: 1100px;
-    background: rgb(255, 253, 253);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0px 12px 25px rgb(214, 209, 209);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .graph-container:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 15px 30px rgb(226, 225, 225);
-  }
-  
-  .graph-info {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    opacity: 0.95;
-    font-weight: 500;
-  }
-  
+
+@keyframes pulse-glow {
+  0% { text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0; }
+  50% { text-shadow: 0 0 25px #ff4c4c, 0 0 40px #ff4c4c; }
+  100% { text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0; }
+}
+
+.graph-container {
+  width: 92%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0px 25px 60px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.graph-container:hover {
+  transform: scale(1.015);
+  box-shadow: 0px 30px 70px rgba(255, 255, 255, 0.3);
+  border-color: #00fff0;
+}
+
+.graph-info {
+  font-size: 1.5rem;
+  margin-bottom: 35px;
+  margin-top: 50px;
+  color: #e0f7fa;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}

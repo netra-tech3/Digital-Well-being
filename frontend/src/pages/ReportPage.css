@@ -1,4 +1,4 @@
-/* ReportPage.css - Advanced Styling */
+/* 🚀 Futuristic Report Page Styling */
 
 .report-page {
   display: flex;
@@ -6,71 +6,124 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 40px;
+  background: linear-gradient(145deg, #030303, #392004);
+  color: #ffffff;
+  padding: 60px 20px;
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .page-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 25px;
 }
 
 .report-summary {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  max-width: 850px;
+  margin-bottom: 30px;
   font-size: 1.2rem;
-  line-height: 1.6;
+  
+  line-height: 1.7;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.just{
+  color: #ffffff;
+}
+
+.data{
+  color: #06618b;
+  font-size: 20px;
 }
 
 .report-insights {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 14px;
+  max-width: 850px;
+  margin-top: 25px;
   text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 35px rgba(255, 0, 150, 0.2);
+  backdrop-filter: blur(15px);
+  animation: slideUp 1.2s ease;
 }
 
 .report-insights h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #2d6ccb, #1787b7);
+   
 }
 
 .report-insights ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8;
+  color: #d0f0ff;
+}
+
+.report-insights li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
 }
 
 .report-insights li::before {
-  content: "\2714\fe0f";
-  margin-right: 10px;
-  color: #4caf50;
+  content: "🌐";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  color: #00e5ff;
 }
 
 .pdf-btn {
-  margin-top: 30px;
-  background-color: #4caf50;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #2d6ccb, #1787b7);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 30px;
+  border-radius: 10px;
   font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
 }
 
 .pdf-btn:hover {
-  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ToxicityGraph from "../components/ToxicityGraph";
 import FourDayToxicityGraph from "../components/FourDayToxicityGraph";
+import  "./ToxicityGraphPage.css";
 
 const ToxicityGraphPage = () => {
   const [toxicityData, setToxicityData] = useState([]);
@@ -21,7 +22,7 @@ const ToxicityGraphPage = () => {
   return (
     <div style={styles.page}>
       <div style={styles.header}>
-        <h1 style={styles.heading}>📊 Toxicity Dashboard</h1>
+        <h1 style={styles.heading}>📊 Toxicity Ghaphs</h1>
       </div>
 
       {/* Graph 1: Last 24 Hours */}
@@ -49,7 +50,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #1b1b2f, #2a2a4a)",
+    background: "linear-gradient(145deg, #030303, #392004)",
     color: "white",
     textAlign: "center",
     padding: "40px",
@@ -61,7 +62,6 @@ const styles = {
   heading: {
     fontSize: "3rem",
     fontWeight: "bold",
-    textShadow: "4px 4px 12px rgba(255, 255, 255, 0.8)",
   },
   subheading: {
     fontSize: "1.8rem",

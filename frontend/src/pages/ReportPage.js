@@ -109,13 +109,13 @@ const ReportPage = () => {
       <h1 className="page-title">Full Digital Well-being Report</h1>
 
       <div className="report-summary">
-        <p>
+        <p className="just">
           This report shows your toxicity exposure over the last 4 days, including daily toxicity levels and
           average exposure. Maintaining awareness of digital consumption is essential for mental health and productivity.
         </p>
       </div>
 
-      <div ref={reportRef}>
+      <div className="data" ref={reportRef}>
         <ReportGeneration data={toxicityData} />
       </div>
 

@@ -1,56 +1,75 @@
-/* Advanced Sidebar Navbar Styling */
+/* 🚀 Out-of-this-World Sidebar Navbar Styling */
 
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 250px;
-    background: linear-gradient(180deg, #1e1e2f, #252540);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .sidebar ul li {
-    width: 100%;
-  }
-  
-  .sidebar ul li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-    padding: 12px 20px;
-    transition: 0.3s;
-    width: 100%;
-  }
-  
-  .sidebar ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid #ff4747;
-  }
-  
-  .sidebar ul li a svg {
-    font-size: 20px;
-  }
-  
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 260px;
+  background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  padding-left: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  width: 100%;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  padding: 15px 25px;
+  transition: 0.4s;
+  width: 100%;
+  position: relative;
+  border-left: 4px solid transparent;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00fff0;
+  color: #00fff0;
+  box-shadow: inset 4px 0 8px rgba(0, 255, 255, 0.1);
+}
+
+.sidebar ul li a svg {
+  font-size: 22px;
+}
+
+/* Add padding-left to page content to avoid overlap */
+.page,
+.report-page,
+.summary-page,
+.mental-health-page {
+  padding-left: 270px; /* Account for sidebar width */
+  box-sizing: border-box;
+}
