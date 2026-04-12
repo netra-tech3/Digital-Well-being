@@ -1,0 +1,73 @@
+/* Footer base */
+.footer {
+  padding: 60px 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Glass container */
+.footer-container {
+    /* max-width: 1200px; */
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: rgb(0 0 0 / 70%);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Sections */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Headings */
+.footer-section h3,
+.footer-section h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.footer-section p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* List */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  color: #cbd5f5;
+  margin-bottom: 8px;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #ffffff;
+  font-size: 14px;
+}
+.footer {
+  background:
+    radial-gradient(circle at 20% 30%, #6366f1, transparent 40%),
+    radial-gradient(circle at 80% 70%, #22d3ee, transparent 40%), #0f172a;
+}
